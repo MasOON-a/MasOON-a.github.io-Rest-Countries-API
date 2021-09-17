@@ -105,6 +105,11 @@ dropdownContainer.addEventListener('click', (e) => {
 
 // Functions
 function modalOpen (countryObject) {
+    // toggle display none for other page elements
+    const searchContainer = document.querySelector('.search-container');
+    searchContainer.style.display = 'none';
+    const countryGrid = document.getElementById('country-grid');
+    countryGrid.style.display = 'none';
     // modal whole
     const modal = document.getElementById('modal');
     // modal info entries
@@ -156,6 +161,11 @@ function modalOpen (countryObject) {
 }
 
 function modalClose () {
+    // toggle display none for other page elements
+    const searchContainer = document.querySelector('.search-container');
+    searchContainer.style.display = 'flex';
+    const countryGrid = document.getElementById('country-grid');
+    countryGrid.style.display = 'grid';
     // toggle display of modal elem
     const modal = document.getElementById('modal');
     modal.style.display = 'none';
